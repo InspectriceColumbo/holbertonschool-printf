@@ -1,8 +1,16 @@
 #include "main.h"
 
-int _putchar(char c)
-{
-    return write(1, &c, 1);  
+typedef struct format_specifier {
+	char specifier;
+	int (*func)(va_list);
+}
+
+format_specifier_t;
+
+format_specifier_t specifiers[] = {
+	{'i', _printf_chars},
+	{'s', _printf_string},
+	{'%', _printf_percents},
 }
 
 int _printf(const char *format, ...)
