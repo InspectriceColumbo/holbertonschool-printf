@@ -9,6 +9,6 @@
 int _printf_percents(va_list args)
 {
 	(void)args;
-	_putchar("%");
-        return (1);
+	_putchar('%');
+	return (1);
 }
