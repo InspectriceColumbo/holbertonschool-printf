@@ -6,6 +6,20 @@
 #include <unistd.h>
 #include <limits.h>
 
+typedef struct format_specifier
+{
+	char specifier;
+	int (*func)(va_list);
+}
+
+format_specifier_t;
+
+format_specifier_t specifiers[] = {
+	{'c', _printf_chars},
+	{'s', _printf_string},
+	{'%', _printf_percents},
+}
+
 /**
 * stdlib - malloc free
 * stdarg - variadic function
