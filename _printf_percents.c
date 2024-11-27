@@ -3,7 +3,7 @@
 /**
  * _printf_percents - Prints a percentage character
  * @args: argument of type va_list (list of args passed to the function)
- * Return: 1
+ * Return: 1 (number of char printed)
  */
 
 int _printf_percents(va_list args)
