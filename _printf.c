@@ -7,14 +7,11 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-
 	for (ptr = format; *ptr != '\0'; ptr++)
 	{
 		if (*ptr == '%' && *(ptr + 1) != '\0')
 		{
 			ptr++;
-
-
 			if (*ptr == 'c')
 			{
 				char c = va_arg(args, int);
@@ -27,30 +24,21 @@ int _printf(const char *format, ...)
 				char *str = va_arg(args, char *);
 
 				for (int i = 0; str[i] != '\0'; i++)
-				{
 					_putchar(str[i]);
-					count++;
-				}
-			}
-			else if (*ptr == '%')
-			{
-				_putchar('%');
 				count++;
 			}
-			else
-			{
+			else if (*ptr == '%')
 				_putchar('%');
-				_putchar(*ptr);
-				count += 2;
-			}
+			count++;
+			else
+				_putchar('%');
+			_putchar(*ptr);
+			count += 2;
 		}
 		else
-		{
 			_putchar(*ptr);
-			count++;
-		}
+		count++;
 	}
-
 	va_end(args);
 	return (count);
 }
