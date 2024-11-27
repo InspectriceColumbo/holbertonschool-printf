@@ -8,7 +8,7 @@ typedef struct format_specifier {
 format_specifier_t;
 
 format_specifier_t specifiers[] = {
-	{'i', _printf_chars},
+	{'c', _printf_chars},
 	{'s', _printf_string},
 	{'%', _printf_percents},
 }
