@@ -4,8 +4,8 @@
 
 /**
  * _printf_decimals - Function that prints decimals
- * @ap: contains decimals
- * Return: the number of printed decimals
+ * @ap: list of args of decimals (arg of type va_list)
+ * Return: len, i.e the number of printed decimals
  */
 
 int _printf_decimals(va_list ap)
