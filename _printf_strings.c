@@ -14,13 +14,11 @@ int _printf_string(va_list args)
 	char *string = va_arg(args, char *);
 
 	if (string == NULL)
-		string = "null";
+		string = "(null)";
 
-	while (*string != 0)
+	while (string[index])
 	{
-		_putchar(*string);
-		string++;
-		index++;
+		_putchar(string[index++]);
 	}
 	return (index);
 }
