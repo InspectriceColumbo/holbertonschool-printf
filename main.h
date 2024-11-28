@@ -20,5 +20,6 @@ int _printf_string(va_list args);
 int _printf_chars(va_list args);
 int _printf_percents(va_list args);
 int _print_decimals(va_list ap);
+int _print_integers(va_list ap);
 
 #endif
