@@ -5,46 +5,43 @@
  * @...: variable number of args that correspond to the format specifiers
  * Return: (count)
  */
+
 int _printf(const char *format, ...)
 {
-	int count = 0;
-	const char *ptr;
-	va_list args;
+    format_specifier_t specifiers[] = {
+        {'c', _printf_chars}, {'s', _printf_string},
+        {'d', _printf_decimals}, {'i', _printf_integers},
+        {'%', _printf_percents}, {'\0', NULL},
+    };
+    va_list args;
+    int i = 0, j, counter = 0;
 
-	va_start(args, format);
-	for (ptr = format; *ptr != '\0'; ptr++)
-	{
-		if (*ptr == '%' && *(ptr + 1) != '\0')
-		{
-			ptr++;
-			if (*ptr == 'c')
-			{
-				char c = va_arg(args, int);
+    if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+        return (-1);
 
-				count += _putchar(c);
-			} else if (*ptr == 's')
-			{
-				char *str = va_arg(args, char *);
-				int i = 0;
-
-				while (str[i] != '\0')
-				{
-					count += _putchar(str[i]);
-					i++;
-				}
-			} else if (*ptr == '%')
-			{
-				count += _putchar('%');
-			} else
-			{
-				_putchar('%');
-				_putchar(*ptr);
-				count += 2;
-			}
-		} else
-		{
-			count += _putchar(*ptr);
-		}
-	} va_end(args);
-	return (count);
+    va_start(args, format);
+    while (format[i])
+    {
+        if (format[i] != '%')
+            counter += _putchar(format[i]);
+        else
+        {
+            for (j = 0; specifiers[j].specifier != '\0'; j++)
+                if (format[i + 1] == specifiers[j].specifier)
+                {
+                    counter += specifiers[j].func(args);
+                    i++;
+                    break;
+                }
+            if (!specifiers[j].specifier)
+            {
+                counter += _putchar(format[i]);
+                counter += _putchar(format[i + 1]);
+                i++;
+            }
+        }
+        i++;
+    }
+    va_end(args);
+    return (counter);
 }
