@@ -12,9 +12,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <limits.h>
-#include <stddef.h>
-#include <stdio.h>
 
 /**
  * @struct format_specifier: A structure to map format specifiers to their..
