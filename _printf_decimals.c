@@ -3,12 +3,12 @@
 #include <limits.h>
 
 /**
- * _printf_deci - Function that prints decimals
+ * _printf_decimals - Function that prints decimals
  * @ap: contains decimals
  * Return: the number of printed decimals
  */
 
-int _print_decimals(va_list ap)
+int _printf_decimals(va_list ap)
 {
   int n = va_arg(ap, int);
   unsigned int num;
