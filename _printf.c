@@ -37,6 +37,7 @@ format_specifier_t specifiers[] = {
 	    {
 	      counter += _putchar(format[i]);
 	      counter += _putchar(format[i + 1]);
+	      va_arg(args, int *);
 	      i++;
 	    }
 	}
