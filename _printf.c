@@ -49,6 +49,10 @@ int _printf(const char *format, ...)
 			_putchar(*ptr);
 			count++;
 		}
+
 	} va_end(args);
+
+	}
+	va_end(args);
 	return (count);
 }
