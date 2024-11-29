@@ -43,8 +43,8 @@ Other characters in the format string are copied to the output verbatim, and unk
 The function
 .B _printf
 returns the number of characters that are printed (excluding the null byte that is used to end output to strings). In case of error (e.g., the format string is null), the function returns -1.
-                                                               .SH EXAMPLES
 
+.SH EXAMPLES
 .PP
 To print a string:
 .EX
