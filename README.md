@@ -1,8 +1,14 @@
+
+![flowchart printf drawio (6)](https://github.com/user-attachments/assets/4d0a2cba-e27a-4a98-b9dc-7d6f85da77ab)
+
+
+
 Title:
 Our own printf function
 
 Description:                                              
-The function printf is one of C language's most known function. It is used to do formatted printing, i.e, to print a string of characters and to return it to output. With this project, our goal was to mimic printf's basic capabilities (such as handling the character, decimal and string specifiers)  by building our own function named _printf.
+The function printf is one of C language's most known function. It is used 
+to do formatted printing, i.e, to print a string of characters and to return it to output. With this project, our goal was to mimic printf's basic capabilities (such as handling the character, decimal and string specifiers)  by building our own function named _printf.
 
 Requirements:
 Our coding style respects the betty-style requirements.
