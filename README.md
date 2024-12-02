@@ -24,14 +24,14 @@ Flowchart:
 insert image describing the function's reasoning
 
 Examples:
-To print a string:
-.EX
-_printf("Hello there... %s!\n", "General Kenobi");
-.EE
-Output:
-.EX
-Hello there... General Kenobi!
-.EE
+To print a string: <br />
+.EX <br />
+_printf("Hello there... %s!\n", "General Kenobi"); <br />
+.EE <br />
+Output: <br />
+.EX <br />
+Hello there... General Kenobi! <br />
+.EE <br />
 
 Man page:
 See the link to our manpage here: 
