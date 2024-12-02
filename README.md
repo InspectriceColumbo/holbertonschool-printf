@@ -1,8 +1,3 @@
-
-![flowchart printf drawio (6)](https://github.com/user-attachments/assets/4d0a2cba-e27a-4a98-b9dc-7d6f85da77ab)
-
-
-
 Title:
 Our own printf function
 
@@ -20,8 +15,10 @@ Authorized functions:
 Authorized functions are write, malloc, and free, as well as the macros va_start, va_end, va_copy and va_arg. Those last four are used when a variable is of type va_list, meaning that the function takes a variable number of arguments.
 
 Return: NULL or number of printed elements
+
 Flowchart:
-insert image describing the function's reasoning
+
+![flowchart printf drawio (6)](https://github.com/user-attachments/assets/4d0a2cba-e27a-4a98-b9dc-7d6f85da77ab)
 
 Examples:
 To print a string: <br />
